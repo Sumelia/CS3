@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .one:link {
+                background-color: yellow;
+                text-decoration: none;
+                padding: 10px;
+                font-size: 30px;
+                margin: 10px;
+                border: outset white 3px;
+            }
+            .one:visited {
+                background-color: green;
+                color: white;
+                border: outset white 3px;
+            }
+            .one:hover {
+                background-color: pink;
+                color: violet;
+                border: outset white 3px;
+            }
+            .one:active {
+                background-color: cyan;
+                color: yellow;
+                border: outset white 3px;
+            }
+            .two:link {
+                background-color: orange;
+                text-decoration: none;
+                padding: 10px;
+                font-size: 30px;
+                border: outset white 3px;
+            }
+            .two:visited {
+                background-color: blue;
+                color: white;
+                border: outset white 3px;
+            }
+            .two:hover {
+                background-color: hotpink;
+                color: lightgreen;
+                border: outset white 3px;
+            }
+            .two:active {
+                background-color: red;
+                color: lightpink;
+                border: outset white 3px;
+            }
+            .whole div {
+                border: solid black 1px;
+                width: 150px;
+                height: 150px;
+                margin-top: 30px;
+                margin-left: 10px;
+            }
+            #div1:target {
+                display: block;
+                border: solid black 1px;
+                background-color: darkblue;
+                color: white;
+            }
+            #div2:target {
+                display: block;
+                border: dotted green 10px;
+                background-color: lightblue;
+                color: white;
+            }
+            body {
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="whole">
+            <a class="one" href="#div1">
+                First link
+            </a>
+            <a class="two" href="#div2">
+                Second link
+            </a>
+            <div id="div1">
+                <h2>Div 1 here</h2>
+            </div>
+            <div id="div2">
+                <h2>Div 2 here</h2>
+            </div>
+        </body>
+    </body>
+</html>

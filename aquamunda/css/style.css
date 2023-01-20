@@ -107,7 +107,10 @@ footer ul li{
 }	
 .socials{
 	margin-top: 25px;
-}	
+}
+.socials:hover{
+	padding:100px;
+}
 #facebook{
 		background: url('htdocs/images/social.jpg') no-repeat -15px -40px;
 		width: 37px;

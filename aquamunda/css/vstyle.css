@@ -119,23 +119,34 @@ footer ul li{
 #facebook{
 		background: url('htdocs/images/social.jpg') no-repeat -15px -40px;
 		width: 37px;
-		height: 40px;
-		
+		height: 40px;	
+}
+#facebook:hover {
+	padding: 10px;
 }
 #instagram{
 		background: url('htdocs/images/social.jpg') no-repeat -120px -40px;
 		width: 37px;
 		height: 40px;
 }
+#instagram:hover {
+	padding: 10px;
+}
 #twitter{
 		background: url('htdocs/images/social.jpg') no-repeat -225px -40px;
 		width: 37px;
 		height: 40px;
 }
+#twitter:hover {
+	padding: 10px;
+}
 #line{
 		background: url('htdocs/images/social.jpg') no-repeat -225px -130px;
 		width: 37px;
 		height: 40px;
+}
+#line:hover {
+	padding: 10px;
 }
 #contact a{
 	margin-left: 1045px;

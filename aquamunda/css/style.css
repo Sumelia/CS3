@@ -115,7 +115,7 @@ footer ul li{
 		
 }
 #facebook:hover {
-	background-size: 100px 100px;
+	padding: 100px;
 }
 #instagram{
 		background: url('htdocs/images/social.jpg') no-repeat -120px -40px;

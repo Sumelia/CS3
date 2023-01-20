@@ -1,0 +1,140 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: "Lato";
+	box-sizing: border-box;
+}
+.banner{
+	width: 100%;
+	height: 30vh;
+	background-image:url('htdocs/images/background.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.navbar{
+	width: 85;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo{
+		width: 120px;
+		cursor: pointer;
+}
+.navbar ul li{
+		list-style: none;
+		display: inline-block;
+		margin: 0 20px;
+		position: relative;
+}
+.navbar ul li a{
+		text-decoration: none;
+		color: #FFF;
+}
+.navbar ul li::after{
+		content: '';
+		height: 3px;
+		width: 0%;
+		background: #009688;
+		position: absolute;
+		left:0;
+		bottom: -10px;
+		transition: 0.5s;
+}
+.navbar ul li:hover::after{
+	width: 100%;
+}	
+.about{
+	width:100%;
+	padding: 78px 0px;
+}
+.about img{
+	height: auto;
+	width: 420px;
+}
+.what{
+	width: 550px;
+	margin-top: 50px;
+}
+.main{
+	width: 90%;
+	max-width: 95%;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.what h1{
+	color: blue;
+	font-size: 60px;
+	margin-bottom: 20px;
+}
+.what h5{
+	color: black;
+	font-size: 25px;
+	margin-bottom: 25px;
+	letter-spacing: 2px;
+}
+.what p{
+	color:brown;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 45px;
+}
+.do{
+	width: 80%;
+	margin-top: 0px;
+	margin-left: 30px;
+}
+.do h1{
+	color: blue;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+.do p{
+	color:brown;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 45px;
+}
+footer ul li{	
+		list-style: none;
+		display: inline-block;
+		margin: 0px;
+		position: relative;
+		
+}	
+.socials{
+	margin-top: 25px;
+}	
+#facebook{
+		background: url('htdocs/images/social.jpg') no-repeat -15px -40px;
+		width: 37px;
+		height: 40px;
+		
+}
+#instagram{
+		background: url('htdocs/images/social.jpg') no-repeat -120px -40px;
+		width: 37px;
+		height: 40px;
+}
+#twitter{
+		background: url('htdocs/images/social.jpg') no-repeat -225px -40px;
+		width: 37px;
+		height: 40px;
+}
+#line{
+		background: url('htdocs/images/social.jpg') no-repeat -225px -130px;
+		width: 37px;
+		height: 40px;
+}
+#contact a{
+	margin-left: 1045px;
+	text-decoration: none;
+	color: #000000;
+	margin-top: 0;
+}

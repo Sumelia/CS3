@@ -108,14 +108,14 @@ footer ul li{
 .socials{
 	margin-top: 25px;
 }
-.socials:hover{
-	transform: scale(2, 3);
-}
 #facebook{
 		background: url('htdocs/images/social.jpg') no-repeat -15px -40px;
 		width: 37px;
 		height: 40px;
 		
+}
+#facebook:hover {
+	transform: scale(2, 3);
 }
 #instagram{
 		background: url('htdocs/images/social.jpg') no-repeat -120px -40px;

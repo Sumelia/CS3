@@ -109,7 +109,7 @@ footer ul li{
 	margin-top: 25px;
 }
 .socials:hover{
-	padding:100px;
+	transform: scale(2, 3);
 }
 #facebook{
 		background: url('htdocs/images/social.jpg') no-repeat -15px -40px;

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			* {
+				text-align: center;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<h1> Toss A Coin! </h1>
+		<button id="click" type="button">CLICK ME</button>
+<p>
+    You got: <span id="result"></span>
+</p>
+		
+		<div style="padding:10px">
+			<p id="demo1" style="color:green; font-size: 30px"></p>
+			<img id="demo" src="" width="50px">
+		</div>
+		<script>
+			document.getElementById('click').onclick = click;
+
+var heads = 0;
+var tails = 0;
+function click() {  
+    x = (Math.floor(Math.random() * 2) == 0);
+    if(x){
+    	flip("HEADS");
+    }else{
+        flip("TAILS");
+    }
+};
+function flip(coin) {
+    document.getElementById("result").innerHTML = coin;
+};
+		</script>
+	</body>
+</html>

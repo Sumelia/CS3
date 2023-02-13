@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			* {
+				text-align: center;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<h1> Toss A Coin! </h1>
+		<button onclick="test()">Here</button>
+		
+		<div style="padding:10px">
+			<p id="demo1" style="color:green; font-size: 30px"></p>
+			<img id="demo" src="" width="80px">
+		</div>
+		<script>
+			var x = ["head", "tail"];
+			function test() {
+				var c = Math.floor(Math.random() * 2);
+				document.getElementById("demo").src = "coin/" + x[c] + ".png";
+				document.getElementById("demo1").innerHTML = x[c].toUpperCase() + " is the result.";
+			}
+		</script>
+	</body>
+</html>

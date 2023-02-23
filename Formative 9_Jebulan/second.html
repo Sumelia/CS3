@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+   	img{
+   	    width: 1200px;
+   	    height: 600px;
+   	    border: 2.5px solid #f1ee8e;
+   	    margin-top: 15px;
+   	}
+	button{
+	margin-right: 50px;
+	margin-left: 310px;
+	text-align:center;
+	padding-right: 20px;
+	padding-left: 20px;
+	}
+	h1{
+	font-family: georgia;
+	color: #f1ee8e;
+	margin-left: 370px;
+	}
+   </style>
+</head>
+<body>
+<h1> Which of us is cuter? uwu </h1>
+<img id="catPic"
+					src="mcat.jpg" >
+			
+<div class="button">
+		<button onclick=ragdoll();>
+			Ragdoll
+		</button>
+		<button onclick=munchkin();>
+			Munchkin
+		</button>
+	
+	</div>
+	<script>
+	function ragdoll(){
+    document.getElementById('catPic')
+    .src="rcat.jpg";
+	}
+      
+	function munchkin(){
+		document.getElementById('catPic')
+		.src="mcat.jpg";
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>FA 10</title>
+</head>
+<body>
+<p id="random-number"></p>
+<p id="number-breakdown"></p>
+    <script>
+      const randonNumber = Math.floor(Math.random() 1001);
+      const randonNumberElement document.getElementById("random-number"); randomNumberElement.innerHTML Randomly generated number: ${randonNumber)";
+      const ones = randomhuber N 10; const tens Hath.floor(randomNumber/10) % 10;
+      const hundreds = Math.floor(randomNumber / 100);
+      const breakdownElement=document.getElementById("number-breakdown"); breakdownElement.innerHTML = "Breakdown: S(hundreds 100), 5(tens 10), Stones);
+    </script>
+  </body>
+</html>

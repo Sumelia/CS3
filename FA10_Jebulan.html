@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="randnum"></p>
+<p id="number-breakdown"></p>
+    <script>
+
+     const randNum = Math.floor(Math.random() * 1001);
+	 	document.getElementById("randnum").innerHTML = "Randomly generated number: " + randNum ;
+	const placeValue = (randNum , res = [] , factor = 1) => {
+		if(randNum){
+		const val = (randNum % 10) * factor;
+		res.unshift(val);
+		return placeValue(Math.floor(randNum / 10), res, factor * 10);
+	};
+   return res;
+};
+document.getElementById("number-breakdown").innerHTML = "Breakdown: " + (placeValue(randNum));
+    </script>
+  </body>
+</html>

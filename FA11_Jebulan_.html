@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p id="input"></p>
+<p id="output"></p>
+<script>
+    
+function determineTriangle(val1, val2, val3)
+{
+    if (val1 == val2 && val2 == val3)
+       alert("Output: Equilateral Triangle");
+    else if (val1 == val2 || val2 == val3 || val3 == val1)
+        alert("Output: Isosceles Triangle");
+    else
+        alert("Output: Scalene Triangle");
+		
+	 
+}
+	let val1 = prompt("Please Enter The Value 1"); 
+	let val2 = prompt("Please Enter The Value 2");
+	let val3 = prompt("Please Enter The Value 3");
+	alert( "Input: " + val1 + "," + val2 + ","+val3);
+	determineTriangle(val1, val2, val3);
+</script>
+</body>
+</html>

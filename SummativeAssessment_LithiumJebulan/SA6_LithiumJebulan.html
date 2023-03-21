@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>One Time Password </title>
+			  <meta charset="UTF-8">
+			  <meta name="description" content="Online Shop">
+			  <meta name="keywords" content="HTML, CSS, JavaScript">
+			  <meta name="author" content="Edits">
+			  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body onload="makeOTP()"> <!--- to generate a 6-digit number as the page loads --->
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a href="#" onclick="makeNewOTP()"> New OTP </a></h2> <!--- to link and generate a new otp --->
+    <button onclick="inputOTP()"> Enter the OTP as shown above </button> <!--- to input the otp and check if it;s true --->
+	
+    <script>
+        	/* this function is used to create and diplay the 6-digit otp */function makeOTP() {
+        		var sixNum = Math.floor(Math.random() * (999999 - 100000 + 1)) + 100000; /* generate a random 6 digit number */
+					document.getElementById("otp").innerHTML = sixNum; /* display the generated value */
+        	}
+        	/* this function is used to create and diplay a new 6-digit otp */function makeNewOTP() {
+        		makeOTP(); /* call the function to generate a new random 6 digit number */
+        	}
+        	/* this function is used to input the otp and check if it;s true */function inputOTP() {
+        		var inputotp = prompt("Please type the 6-Digit OTP shown on the Screen. "); /* store the input of the otp */
+					if ( inputotp == document.getElementById("otp").innerHTML){
+						window.open("https://i.pinimg.com/474x/20/d4/f0/20d4f0a9da50a0045431290abd277679.jpg"); /* open chosen window is the otp is correct */
+					} 
+					else {
+						alert("Oops, unfortunately, something's amiss. Please try again!"); /* declare the otp input to be wrong and let them try again */
+							makeOTP();  /* automatically create a new 6-digit otp that's also automatically displayed */
+					}
+			}
+    </script>
+</body>
+</html>
+

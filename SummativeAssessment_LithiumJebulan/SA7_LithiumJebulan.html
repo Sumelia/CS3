@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		  <meta charset="UTF-8">
+		  <meta name="description" content="Online Shop">
+		  <meta name="keywords" content="HTML, CSS, JavaScript">
+		  <meta name="author" content="Exo">
+		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button onclick="knowFortune()"> Click here to enter your name </button>
+     <script>
+    	/* function to know the fortune for the day*/
+		function knowFortune(){
+			var whoName; /* store name */
+			var ftune; /* store fortune*/
+				whoName = prompt("Please enter your full name", " Sumelia Louise Agreda Jebulan"); /* prompt to ask for name */
+					document.getElementById("thename").innerHTML = whoName; /* display the name */
+		
+		let length = whoName.length; /* count the characters found in the full name */
+		while (length > 9)/* for the number to only range from 0 - 9 */{
+		length = Math.floor(length/10)+(length % 10); /* single out the digits of the numbers and add them */
+		}
+		/* switch in order to easily determine the fortune from the length variable */switch (length) {
+		  case 0:
+			ftune = "Run.";
+			break;
+		  case 1:
+			ftune = "Enjoy Every Living Moment!...";
+			break;
+		  case 2:
+			ftune = "I see money in your future, it's not yours though...";
+			break;
+		  case 3:
+			ftune = "Your efforts have not gone unnoticed.";
+			break;
+		  case 4:
+			ftune = "This day is never gonna give you up, never gonna let you down-";
+			break;
+		  case 5:
+			ftune = "Flattery will go far today.";
+			break;
+		  case  6:
+			ftune = "The smart thing is to prepare for the unexpected.";
+			break;
+		  case 7:
+			ftune = "Wealth awaits you very soon.";
+			break;	
+		  case 8:
+			ftune = "Do not mistake temptation for opportunity.";
+			break;
+		  case 9:
+			ftune = "It is a good day to have a good day.";
+}
+document.getElementById("fortune").innerHTML = ftune; /* display the fortune*/
+		}
+    </script>
+    
+</body>
+</html>
+

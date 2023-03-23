@@ -33,7 +33,7 @@
 					document.getElementById("thename").innerHTML = whoName; /* display the name */
 		
 		let length = whoName.length; /* count the characters found in the full name */
-		if (length > 9)/* for the number to only range from 0 - 9 */{
+		while (length > 9)/* for the number to only range from 0 - 9 */{
 		length = Math.floor(length/10)+(length % 10); /* single out the digits of the numbers and add them */
 		}
 		/* switch in order to easily determine the fortune from the length variable */switch (length) {

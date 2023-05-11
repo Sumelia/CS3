@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Sign-up Sheet</title>
+	<style>
+		body {
+			font-family: Georgia, Times, serif;
+			margin: 20px auto;
+			padding: 20px;
+			border-radius: 10px;
+			text-align: left;
+			color: black;
+			width: 800px;
+			background-color: #f1f1f1;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		}
+		
+		* {
+			box-sizing: border-box;
+		}
+		legend{
+		font-size: 24px;
+		font-weight: bold;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+		input[type=text],
+		input[type=password],
+		input[type=gender],
+		input[type=email],
+		input[type=address],
+		input[type=interest],
+		select,
+		textarea	{
+			width: 100%;
+			padding: 15px;
+			margin: 5px 0 22px 0;
+			display: inline-block;
+			border: none;
+			background: #dcf5fc;
+			text-align: center;
+		}
+		
+		input[type=text]:focus,
+		input[type=password]:focus,
+		input[type=gender]:focus,
+		input[type=email]:focus,
+		input[type=address]:focus,
+		input[type=interest]:focus,
+		select:focus,
+		textarea:focus {
+			background-color: #c1e3e2;
+			outline: none;
+			text-align: center;
+		}
+		
+		.invalid {
+			border-color: red;
+		}
+		
+		.valid {
+			border-color: green;
+		}
+		
+		button {
+			background-color: #04AA6D;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 100%;
+			opacity: 0.9;
+		}
+		
+		button:hover {
+			opacity: 1;
+		}
+		summary{
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: center;
+        }
+		#user-info{
+			font-size: 18px;
+            max-width: 750px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #c1e3e2;
+            box-shadow: 0 0 20px #c1e3e2;
+            text-align: center;
+            color: black;
+			}
+	</style>
+</head>
+<body>
+	<form onsubmit="displayUserInfo(event)">
+		<fieldset>
+			<legend>Greetings! Please fill up the Sign-up Form. Thank you!</legend>
+
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required>
+
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required>
+
+				<label for="gender">Gender:</label>
+				<select id="gender" name="gender" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required>
+					<option value="">--- Select Gender ---</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="prefer not to mention">Prefer Not to Mention</option>
+				</select>
+
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required>
+
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required>
+
+				<label for="address">Address:</label>
+				<textarea id="address" name="address" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required></textarea>
+
+				<label for="interests">Interests:</label>
+				<textarea id="interests" name="interests" onblur="onBlurInput(this)" onfocus="onFocusBorder(this)" required></textarea>
+
+				<button type="submit">Sign Up</button>
+				<button type="reset" onclick="clearForm()">Reset</button>
+		</fieldset>
+	</form>
+  
+ 
+	<div id="user-info"></div>
+
+	<script>
+		function onBlurInput(input) {
+			if (input.value.trim() === '') {
+			input.style.border = '2px solid red';
+		  } else {
+			input.style.border = '2px solid green';
+		  }
+}
+		function onFocusBorder(input) {
+		  input.style.border = '';
+}
+
+		function displayUserInfo(event) {
+			event.preventDefault();
+			const userInfoDiv = document.getElementById('user-info');
+			const name = document.getElementById('name').value;
+			const username = document.getElementById('username').value;
+			const gender = document.getElementById('gender').value;
+			const password = document.getElementById('password').value;
+			const email = document.getElementById('email').value;
+			const address = document.getElementById('address').value;
+			const interests = document.getElementById('interests').value;
+			
+			
+			userInfoDiv.innerHTML = 
+			"User Information Summary"+	"<br />" +"<br />" +
+			"Name: " + name + "<br />" + 
+			"Username: " + username + "<br />" + 
+			"Gender: " + gender + "<br />" +  
+            "Password: " + password + "<br />" + 
+			"Email: " + email + "<br />" + 
+			"Address: " + address + "<br />" + 
+			"Interests: " + interests + "<br />";;
+		}
+		function clearForm() {
+			document.getElementById("user-info").innerHTML = "";
+		}
+	</script>
+</body>
+</html>
